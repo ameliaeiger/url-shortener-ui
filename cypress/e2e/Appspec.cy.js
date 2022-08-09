@@ -23,6 +23,18 @@ describe('empty spec', () => {
     cy.get('#input-url')
   })
 
+  it('should have input fields which accurately reflect user input', () => {
+    cy.get('#input-title').click().type("Google").should("have.value", "Google")
+    cy.get('#input-url').click().type("https://www.google.com/").should("have.value", "https://www.google.com/")
+    
+  })
+
+  // it('should display the form', () => {
+  //   cy.get('#input-title').click().type("Google")
+  //   cy.get('#input-url').click().type("https://www.google.com/")
+  //   // cy.g
+  // })
+
 
 
 })
