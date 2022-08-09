@@ -17,8 +17,12 @@ class UrlForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if (this.state.title && this.state.urlToShorten){
     postUrls(this.state.title, this.state.urlToShorten)
     this.clearInputs();
+    } else {
+      alert("Please fill out all required fields.")
+    }
   }
 
   clearInputs = () => {

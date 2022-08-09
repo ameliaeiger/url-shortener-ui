@@ -18,13 +18,8 @@ export class App extends Component {
       this.setState({
         urls:data.urls
       })
-      //function go here
     })
   }
-
-  // displayURLS() {
-  //   this.state.urls.forEach(url =>)
-  // }
 
   render() {
     return (
