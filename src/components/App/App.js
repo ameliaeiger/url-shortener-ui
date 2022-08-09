@@ -13,6 +13,17 @@ export class App extends Component {
   }
 
   componentDidMount() {
+    getUrls().then(data => {
+      console.log(data)
+      this.setState({
+        urls:[data]
+      })
+      //function go here
+    })
+  }
+
+  displayURLS() {
+    this.state.urls.forEach(url => {})
   }
 
   render() {
