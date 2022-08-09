@@ -1,9 +1,9 @@
 import React from 'react';
+import { getUrls } from '../../apiCalls';
 import './UrlContainer.css';
-import { deleteUrl } from '../../apiCalls';
 
-const UrlContainer = props => {
-  const urlEls = props.urls.map((url, index) => {
+const UrlContainer = ({urls, deleteUrls}) => {
+  const urlEls = urls.map((url, index) => {
     return (
       <div id={index+1} className="url">
         <h3>{url.title}</h3>
@@ -11,8 +11,7 @@ const UrlContainer = props => {
         <p>{url.long_url}</p>
         <button
           onClick={event => {
-            console.log(event.target.parentElement.id)
-            deleteUrl(event.target.parentElement.id)
+            deleteUrls(event.target.parentElement.id)
             }}>DELETE</button>
       </div>
     )

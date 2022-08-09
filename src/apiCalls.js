@@ -22,5 +22,11 @@ export const postUrls = (title, urlToShorten) => {
 export const deleteUrl = (id) => {
   fetch(`http://localhost:3001/api/v1/urls/${id}`, {
     method: "DELETE"
-  }).then(() => {console.log("Delete successful!")})
+  })
+    .catch(error => {
+      console.log(error)
+    }).then(() => {
+      console.log("Delete successful!")
+      
+    })
 }
