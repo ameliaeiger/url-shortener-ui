@@ -14,7 +14,7 @@ export const App = () => {
         data.urls
       )
     })
-  })
+  },[urls])
 
   const deleteUrls = (id) => {
     deleteUrl(id)
