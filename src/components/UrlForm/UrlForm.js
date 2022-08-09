@@ -38,7 +38,7 @@ class UrlForm extends Component {
         />
 
         <input
-          id="input-text"
+          id="input-url"
           type='text'
           placeholder='URL to Shorten...'
           name='urlToShorten'
