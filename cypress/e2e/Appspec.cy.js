@@ -40,6 +40,6 @@ describe('empty spec', () => {
     cy.intercept("POST", "http://localhost:3001", {fixture:"example.json"})
     cy.get('#input-title').click().type("Google").should("have.value", "Google")
     cy.get('#input-url').click().type("https://www.google.com/").should("have.value", "https://www.google.com/")
-    cy.get("button").click()
+    cy.get("#submit-button").click()
   })
 })
