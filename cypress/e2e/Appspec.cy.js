@@ -19,6 +19,10 @@ describe('empty spec', () => {
 
   it('should display the form', () => {
     cy.get('form')
+    cy.get('#input-title')
+    cy.get('#input-url')
   })
+
+
 
 })
