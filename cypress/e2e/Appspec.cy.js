@@ -17,5 +17,8 @@ describe('empty spec', () => {
     cy.get('h1').contains("URL Shortener")
   })
 
-})
+  it('should display the form', () => {
+    cy.get('form')
+  })
 
+})
