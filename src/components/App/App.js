@@ -16,15 +16,15 @@ export class App extends Component {
     getUrls().then(data => {
       console.log(data)
       this.setState({
-        urls:[data]
+        urls:data.urls
       })
       //function go here
     })
   }
 
-  displayURLS() {
-    this.state.urls.forEach(url => {})
-  }
+  // displayURLS() {
+  //   this.state.urls.forEach(url =>)
+  // }
 
   render() {
     return (
